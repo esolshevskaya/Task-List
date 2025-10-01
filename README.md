@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Task List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A tiny React app that displays a list of projects/tasks, supports search/filtering, and shows a details view for each project. Built with **React 18**, **Vite**, and a custom hook for local data access.  
 
-Currently, two official plugins are available:
+The app demonstrates modern React practices: functional components, hooks, routing, controlled inputs, and basic accessibility.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Disclaimer
 
-## React Compiler
+This application is a *test project* created as part of a coding assignment.  
+It is not a production-ready or real-world application.  
+The purpose of this project is to demonstrate React, routing, hooks, and basic frontend skills.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Functional components + hooks
+- Custom hook `useProjects()` for local data
+- Search/filter input
+- Project list with clickable links
+- Responsive design for mobile and desktop
+- Basic testing with **Vitest** and **Testing Library**
+- CSS variables for theming and global styles
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. Clone the repository
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+`git clone https://github.com/yourusername/project-list.git
+cd project-list`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 2. Install dependencies
+`npm install`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Run the development server
+`npm run dev`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Open http://localhost:5173 in your browser to view the app.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 4. Run tests
+`npm test`
+
+---
+
+### Dependencies
+
+react & react-dom — UI library
+
+react-router-dom — Routing
+
+vitest — Testing framework
+
+@testing-library/react — Testing utilities
+
+@vitejs/plugin-react — React plugin for Vite
+
+typescript — Type checking
+
+---
+
+### CSS / Styling
+
+Global variables in index.css for colors, fonts, and theme
+
+Fixed-width container for consistent layout
+
+Responsive design with media queries
+
+---
+
+### Search input styled with:
+
+Lavender background
+
+Purple border
+
+Dark purple user text
+
+Purple placeholder text
+
+Titles and project names are styled with appropriate font sizes and color contrast
+
+---
+
+## Notes
+
+All project data is mocked locally in src/data/data.ts.
+
+Routing: / → project list, /projects/:id → project details.
+
+The UI is responsive and supports mobile screens.
+
+Placeholder colors, fonts, and container width can be easily adjusted via CSS variables.
