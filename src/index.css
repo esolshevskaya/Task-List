@@ -1,0 +1,126 @@
+:root {
+  --color-bg: #5a2fc1;
+  --color-white: #ffffff;
+  --color-lavender: #E6E6FA;
+  --color-purple-border: #2c0050;
+  --color-purple-placeholder: #9b7fff;
+  --color-text: #2c0050;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family), sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+.container {
+  width: 600px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.project-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-purple-border);
+  border-radius: 8px;
+  background-color: var(--color-lavender);
+  color: var(--color-text);
+  outline: none;
+}
+
+.project-search::placeholder {
+  color: #8a2be2;
+}
+
+.project-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-top: 1rem;
+  word-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+li {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-white);
+  word-wrap: break-word;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"]:focus {
+  border-color: var(--color-white);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .project-title {
+    font-size: 2rem;
+  }
+  .project-search {
+    font-size: 0.9rem;
+  }
+  li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 0.75rem;
+  }
+  .project-title {
+    font-size: 2.2rem;
+  }
+  .project-search {
+    font-size: 0.95rem;
+  }
+  li {
+    font-size: 1.1rem;
+  }
+}
