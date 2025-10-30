@@ -1,6 +1,6 @@
 # Task List App
 
-A tiny React app that displays a list of projects/tasks, supports search/filtering, and shows a details view for each project. Built with **React 18**, **Vite**, and a custom hook for local data access.  
+A tiny React app that displays a list of projects/tasks, supports search/filtering, and shows a details view for each project. Built with **React 18**, **Vite**, and a custom hook for local data access.
 
 The app demonstrates modern React practices: functional components, hooks, routing, controlled inputs, and basic accessibility.
 
